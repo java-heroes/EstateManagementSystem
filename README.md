@@ -19,3 +19,17 @@
  > Sisteme Ev Bilgileri eklenebilmeli 
 
 * Bu bilgiler tekrar edilemez , kullanıcı bilgilendirilir.
+
+
+
+
+
+ **TAKIM BİLGİSİ**
+ > Takım Lideri
+ * Esra KOÇAK
+ > Takım Lideri
+  * Hasan Hüseyin Küçük
+  * Muammer Ağtaş
+  * Dilara Sevim Polat
+  * Yasin Özer
+
