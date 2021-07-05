@@ -1,5 +1,11 @@
-# KodluyoruzProje
- _Sistemimiz üç temel kullanıcı türüne sahiptir. **Sistem personeli, ev Arayanlar ve evleri satanlar (emlaklar )**_
+# Estate Management System
+ > Sistemimiz üç temel kullanıcı türüne sahiptir. 
+ 
+ **1. Sistem personeli**
+ 
+ **2. Ev Arayanlar**
+ 
+ **3. Evleri Satanlar (Emlaklar)**
  
  > Ev arayanlar  sisteme kayıt olabilmeli 
 
@@ -27,9 +33,9 @@
  **TAKIM BİLGİSİ**
  > Takım Lideri
  * Esra KOÇAK
- > Takım Lideri
-  * Hasan Hüseyin Küçük
-  * Muammer Ağtaş
-  * Dilara Sevim Polat
-  * Yasin Özer
+ > Takım Üyeleri
+  * Hasan Hüseyin KÜÇÜK
+  * Muammer AĞTAŞ
+  * Dilara Sevim POLAT
+  * Yasin ÖZER
 
