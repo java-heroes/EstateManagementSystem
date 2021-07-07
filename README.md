@@ -26,7 +26,12 @@
 
 * Bu bilgiler tekrar edilemez , kullanıcı bilgilendirilir.
 
-
+**KULLANILAN TEKNOLOJİLER**
+* Hibernate
+* Spring Boot
+* Spring Data JPA
+* Lombok
+* PostgreSQL
 
 
 
