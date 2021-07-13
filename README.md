@@ -26,6 +26,10 @@
 
 * Bu bilgiler tekrar edilemez , kullanıcı bilgilendirilir.
 
+**ER Diyagramı**
+![ER](https://user-images.githubusercontent.com/57559558/125463325-324f7ac3-f283-450a-87c7-ea856468a8b4.png)
+
+
 **KULLANILAN TEKNOLOJİLER**
 * Hibernate
 * Spring Boot
