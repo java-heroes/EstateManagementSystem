@@ -33,8 +33,6 @@
 **KULLANILAN TEKNOLOJİLER**
 * Hibernate
 * Spring Boot
-* Spring Data JPA
-* Lombok
 * PostgreSQL
 
 
