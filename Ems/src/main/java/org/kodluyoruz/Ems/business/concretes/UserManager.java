@@ -2,9 +2,11 @@ package org.kodluyoruz.Ems.business.concretes;
 
 
 import java.util.List;
+import java.util.Optional;
 
 import org.kodluyoruz.Ems.business.abstracts.UserService;
 import org.kodluyoruz.Ems.core.utilities.results.DataResult;
+import org.kodluyoruz.Ems.core.utilities.results.ErrorResult;
 import org.kodluyoruz.Ems.core.utilities.results.Result;
 import org.kodluyoruz.Ems.core.utilities.results.SuccessDataResult;
 import org.kodluyoruz.Ems.core.utilities.results.SuccessResult;
@@ -45,10 +47,17 @@ public class UserManager implements UserService {
 		return new SuccessResult("The User has been added to the system ✓");
 	}
 
-	@Override
+	
 	public Result update(User user) {
-		// missing method
-		return null;
+		
+		Optional<User> getUser = userDao.findById(user.getId());
+		  if(!getUser.isPresent()) {
+		         return new ErrorResult("User id not found");
+		    	
+		    }
+	    this.userDao.save(user);
+	    
+		return new SuccessResult("User information updated");
 	}
 
 	@Override
