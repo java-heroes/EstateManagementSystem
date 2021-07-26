@@ -5,7 +5,7 @@ import java.util.List;
 import org.kodluyoruz.Ems.core.utilities.results.DataResult;
 import org.kodluyoruz.Ems.core.utilities.results.Result;
 import org.kodluyoruz.Ems.entities.concretes.Employee;
-import org.kodluyoruz.Ems.entities.concretes.User;
+
 
 
 public interface EmployeesService {

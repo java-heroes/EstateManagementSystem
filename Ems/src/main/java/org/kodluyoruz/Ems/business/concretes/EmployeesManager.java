@@ -9,7 +9,6 @@ import org.kodluyoruz.Ems.core.utilities.results.SuccessDataResult;
 import org.kodluyoruz.Ems.core.utilities.results.SuccessResult;
 import org.kodluyoruz.Ems.dataAccess.abstracts.EmployeeDao;
 import org.kodluyoruz.Ems.entities.concretes.Employee;
-import org.kodluyoruz.Ems.entities.concretes.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.kodluyoruz.Ems.core.utilities.results.Result;
 import org.springframework.stereotype.Service;
