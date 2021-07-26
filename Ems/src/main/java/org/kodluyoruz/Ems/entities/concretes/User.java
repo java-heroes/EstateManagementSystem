@@ -16,13 +16,12 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @Data
 @Entity
 @Table(name="users")
 @NoArgsConstructor
 @AllArgsConstructor
-@Inheritance(strategy =InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.JOINED)
 @JsonIgnoreProperties (value = { "hibernateLazyInitializer", "handler"})
 public class User {
 

@@ -1,5 +1,6 @@
 package org.kodluyoruz.Ems.entities.concretes;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,32 +14,27 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-
-
 @Data
 @Entity
-@Table(name = "sellers")
+@Table(name = "employees")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Seller {
+public class Employee {
+
 	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name= "sellers_id")
+	@Column(name= "id")
 	@PrimaryKeyJoinColumn
-	private int sellersid;
+	private int employeesid;
 	
 	
-	@Column(name = "company_name")
-	private String companyname;
+	@Column(name = "first_name")
+	private String firstname;
 	
-	@Column(name ="web_address")
-	private String webaddress;
-	
-	@Column(name ="phone_number")
-	private String phonenumber;
+	@Column(name = "last_name")
+	private String lastname;
 
 	
 	
@@ -47,3 +43,4 @@ public class Seller {
 	
 
 }
+

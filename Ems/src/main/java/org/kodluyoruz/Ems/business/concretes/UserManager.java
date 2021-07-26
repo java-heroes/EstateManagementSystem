@@ -1,6 +1,5 @@
 package org.kodluyoruz.Ems.business.concretes;
 
-
 import java.util.List;
 import java.util.Optional;
 
@@ -47,9 +46,8 @@ public class UserManager implements UserService {
 		return new SuccessResult("The User has been added to the system ✓");
 	}
 
-	
+	@Override
 	public Result update(User user) {
-		
 		Optional<User> getUser = userDao.findById(user.getId());
 		  if(!getUser.isPresent()) {
 		         return new ErrorResult("User id not found");

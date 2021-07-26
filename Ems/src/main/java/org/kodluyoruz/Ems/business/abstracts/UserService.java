@@ -6,7 +6,6 @@ import org.kodluyoruz.Ems.core.utilities.results.DataResult;
 import org.kodluyoruz.Ems.core.utilities.results.Result;
 import org.kodluyoruz.Ems.entities.concretes.User;
 
-
 public interface UserService {
 
 	DataResult<List<User>> getAll();

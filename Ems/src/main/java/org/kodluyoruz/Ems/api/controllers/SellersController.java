@@ -19,10 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/sellers")
 public class SellersController {
 
-	
-
-
-
 	   private SellersService sellersService;
 	   
 	   @Autowired
