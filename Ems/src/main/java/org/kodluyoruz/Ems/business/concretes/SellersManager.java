@@ -1,9 +1,11 @@
 package org.kodluyoruz.Ems.business.concretes;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.kodluyoruz.Ems.business.abstracts.SellersService;
 import org.kodluyoruz.Ems.core.utilities.results.DataResult;
+import org.kodluyoruz.Ems.core.utilities.results.ErrorResult;
 import org.kodluyoruz.Ems.core.utilities.results.Result;
 import org.kodluyoruz.Ems.core.utilities.results.SuccessDataResult;
 import org.kodluyoruz.Ems.core.utilities.results.SuccessResult;
@@ -37,5 +39,31 @@ public class SellersManager implements SellersService{
 		this.sellerDao.save(seller);
 		return new SuccessResult("selling house added");
 	}
+	
+	@Override
+	public Result delete(Seller seller ) {
+		this.sellerDao.deleteById(seller.getSellersid());
+		return new SuccessResult("Seller deleted successfully.");
+	}
 
-}
+	@Override
+	public Result update(Seller seller) {
+		Optional<Seller> getSeller = sellerDao.findById(seller.getSellersid());
+		  if(!getSeller.isPresent()) {
+		         return new ErrorResult("User id not found");
+		    	
+		    }
+	    this.sellerDao.save(seller);
+	    
+		return new SuccessResult("Seller information updated");
+	}
+
+	@Override
+	public DataResult<Seller> getById(int id) {
+	
+		return new SuccessDataResult<Seller>(this.sellerDao.getById(id));
+	}
+		}
+   
+	
+

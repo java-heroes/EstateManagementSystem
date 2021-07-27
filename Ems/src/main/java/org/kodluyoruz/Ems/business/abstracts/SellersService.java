@@ -8,8 +8,12 @@ import org.kodluyoruz.Ems.entities.concretes.Seller;
 
 
 
+
 public interface SellersService {
 	DataResult<List<Seller>>  getAll() ; 
+	DataResult<Seller> getById(int id);
     Result add(Seller seller);
+    Result delete (Seller seller);
+    Result update(Seller seller);
 	 
 }
