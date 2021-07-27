@@ -24,18 +24,18 @@ public class SellersController {
 	   private SellersService sellersService;
 	   
 	   @Autowired
-	   public SellersController(SellersService sellersService) {
+	     public SellersController(SellersService sellersService) {
 		   this.sellersService=sellersService;
 		   
 	   }
 	   
 	   @GetMapping("/getAll")
-	   public DataResult<List<Seller>>  getAll() {
+	      public DataResult<List<Seller>>  getAll() {
 		   return  this.sellersService.getAll();
 	   }
-		@GetMapping("/getById")
-		public DataResult<Seller> getById(@RequestParam int id) {
-			return this.sellersService.getById(id);
+           @GetMapping("/getById")
+	     public DataResult<Seller> getById(@RequestParam int id) {
+		return this.sellersService.getById(id);
 		}
 	   @PostMapping("/add")
 	   public Result add(@RequestBody Seller seller) {
@@ -48,8 +48,8 @@ public class SellersController {
 			return this.sellersService.delete(seller);
 
 		}
-		@PostMapping("/update")
-		public Result update(@RequestBody Seller seller) {
+	   @PostMapping("/update")
+	     public Result update(@RequestBody Seller seller) {
 		return this.sellersService.update(seller);
 	   
         }
