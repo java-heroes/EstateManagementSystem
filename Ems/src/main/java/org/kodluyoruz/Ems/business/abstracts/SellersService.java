@@ -8,6 +8,7 @@ import org.kodluyoruz.Ems.entities.concretes.Seller;
 
 
 
+
 public interface SellersService {
 	DataResult<List<Seller>>  getAll() ; 
 	DataResult<Seller> getById(int id);
