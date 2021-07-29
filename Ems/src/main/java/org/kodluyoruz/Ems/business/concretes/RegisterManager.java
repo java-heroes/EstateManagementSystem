@@ -65,6 +65,7 @@ private RegisterDao registerDao;
 		return new SuccessDataResult<Register>(this.registerDao.getById(id));
 	}
 
+
 	   
 }
 

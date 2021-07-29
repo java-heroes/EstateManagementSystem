@@ -6,12 +6,9 @@ import org.kodluyoruz.Ems.business.abstracts.EmployeesService;
 import org.kodluyoruz.Ems.core.utilities.results.DataResult;
 import org.kodluyoruz.Ems.core.utilities.results.Result;
 import org.kodluyoruz.Ems.entities.concretes.Employee;
-import org.kodluyoruz.Ems.entities.concretes.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -50,6 +47,12 @@ public class EmployeesController {
 	   @PutMapping("/update")
 		public Result update(@RequestBody  Employee employee) {
 			return this.employeesService.update(employee);
+		}
+	   
+		@GetMapping("/getById")
+		public DataResult<Employee> getById(@RequestParam int id) {
+			return this.employeesService.getById(id);
+
 		}
 	  
 }

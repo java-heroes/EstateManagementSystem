@@ -57,9 +57,9 @@ public class UsersController {
 
 	}
 
-	//@PostMapping("/update")
-	//public Result update(@RequestBody User user) {
-	//	return this.update(user);
-	//}
+	@PostMapping("/update")
+	public Result update(@RequestBody User user) {
+		return this.update(user);
+	}
 
 }

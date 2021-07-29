@@ -16,28 +16,27 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @Data
 @Entity
-@Table(name = "users")
+@Table(name="users")
 @NoArgsConstructor
 @AllArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
-@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler" })
+@JsonIgnoreProperties (value = { "hibernateLazyInitializer", "handler"})
 public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name="id")
 	private int id;
-
-	@Column(name = "email")
+	
+	@Column(name="email")
 	private String email;
-
-	@Column(name = "password")
+	
+	@Column(name="password")
 	private String password;
-
-	@Column(name = "insert_date", columnDefinition = "Date default CURRENT_DATE")
+	
+	@Column(name="insert_date",columnDefinition = "Date default CURRENT_DATE")
 	private Date insertDate;
-
+	
 }
