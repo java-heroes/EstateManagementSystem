@@ -1,4 +1,6 @@
 # Estate Management System
+![download](https://user-images.githubusercontent.com/49093196/127666142-1f9978d6-986b-4061-907a-c58115f730ac.jpg)
+
  > Sistemimiz üç temel kullanıcı türüne sahiptir. 
  
  **1. Sistem personeli**
@@ -11,14 +13,12 @@
 
 * Kayıt sırasında kullanıcıdan ad, soyad, tcno, doğum yılı, e-Posta, şifre, şifre tekrarı bilgileri istenir.
 * Tüm alanlar zorunludur. Kullanıcı bilgilendirilir.
-* Daha önce kayıtlı bir e-posta veya tcno var ise kayıt gerçekleşmez. Kullanıcı bilgilendirilir.
-* Kayıdın gerçekleşmesi için e-posta doğrulaması gerekir.
+* Daha önce kayıtlı bir e-posta veya tcno var ise kayıt gerçekleşmez.
 
 
  > Evlerini satanlar (emlaklar)  sisteme kayıt olabilmeli 
 
-* Kayıt sırasında kullanıcıdan emlak adı, web sitesi, web sitesi ile aynı domaine sahip e-posta, telefon, şifre, şifre tekrarı bilgileri istenir.(Var olan dükkanların katılabilmesi için ,bireysel değil.)
-* Emlak kayıtları iki şekilde doğrulanır. Kaydın gerçekleşmesi için e-posta doğrulaması gerekir.Sistem personelinin onayı gerekmektedir.
+* Kayıt sırasında kullanıcıdan emlak adı, web sitesi, e-posta, telefon, şifre, şifre tekrarı bilgileri istenir.(Var olan dükkanların katılabilmesi için ,bireysel değil.)
 * Daha önce kayıtlı bir e-posta var ise kayıt gerçekleşmez. Kullanıcı bilgilendirilir.
 
 
