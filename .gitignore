@@ -12,3 +12,4 @@ target/
 
 # Visual Studio Code
 .vscode/
+/.metadata/
