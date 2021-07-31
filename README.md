@@ -28,7 +28,8 @@
 
 ***ER Diyagramı***
 
-![ER](https://user-images.githubusercontent.com/57559558/127746432-2c41a989-26ed-4d1f-8dff-7bcccf11820c.png)
+![ER](https://user-images.githubusercontent.com/57559558/127746607-68e576d3-fce4-4fb9-91d4-e467123a871c.png)
+
 
 
 
