@@ -2,8 +2,9 @@ package org.kodluyoruz.Ems.business.concretes;
 
 import java.util.List;
 
+import org.kodluyoruz.Ems.business.abstracts.RegisterCheckService;
 import org.kodluyoruz.Ems.business.abstracts.RegisterService;
-import org.kodluyoruz.Ems.core.utilities.adapters.mernisServiceAdapter.FakeMernisAdapter;
+
 import org.kodluyoruz.Ems.core.utilities.results.DataResult;
 import org.kodluyoruz.Ems.core.utilities.results.ErrorResult;
 import org.kodluyoruz.Ems.core.utilities.results.SuccessDataResult;
@@ -32,17 +33,19 @@ public class RegisterManager implements RegisterService {
 		return new SuccessDataResult<List<Register>>(this.registerDao.findAll(), "Register list successfully.");
 	}
 
-	@Override
+	 @Override
 	public Result add(Register register) {
-		FakeMernisAdapter checkIfRealPerson = new FakeMernisAdapter();
-		boolean result = checkIfRealPerson.Control(register);
-		if (result) {
+		//MernisAdapter mernisAdapter = new MernisAdapter();
+		
+		if (RegisterCheckService.CheckPerson(register)) {
 			this.registerDao.save(register);
 			return new SuccessResult("Register add successfully.");
 		} else {
-			return new ErrorResult("NOT real Person!");
+			return new ErrorResult(" Validation Error - Not a valid person!");
 		}
 	}
+	
+	
 
 	@Override
 	public Result delete(Register register) {

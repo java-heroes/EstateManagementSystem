@@ -42,8 +42,14 @@ public class Register {
 	private String nationaltyidentity;
 
 	@Column(name= "date_of_birth",columnDefinition = "Date default CURRENT_DATE")
-	private Date dateofbirth;
+	private Date dateOfBirth;
 
 	
-	
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
 }
