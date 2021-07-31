@@ -26,8 +26,11 @@
 
 * Bu bilgiler tekrar edilemez , kullanıcı bilgilendirilir.
 
-**ER Diyagramı**
-![ER](https://user-images.githubusercontent.com/57559558/125463325-324f7ac3-f283-450a-87c7-ea856468a8b4.png)
+***ER Diyagramı***
+
+![ER](https://user-images.githubusercontent.com/57559558/127746607-68e576d3-fce4-4fb9-91d4-e467123a871c.png)
+
+
 
 
 **KULLANILAN TEKNOLOJİLER**
