@@ -25,7 +25,7 @@ public class SeekersManager implements SeekersService {
 
 	@Override
 	public Result add(Seeker seeker) {
-		Optional<Seeker> getSeeker = seekerDao.findById(seeker.getSeekersId());
+		Optional<Seeker> getSeeker = this.seekerDao.findById(seeker.getSeekersId());
 		if (getSeeker.isPresent()) {
 			return new ErrorResult("Such a seeker already exists");
 		} else {
@@ -36,7 +36,7 @@ public class SeekersManager implements SeekersService {
 
 	@Override
 	public Result update(Seeker seeker) {
-		Optional<Seeker> getSeeker = seekerDao.findById(seeker.getSeekersId());
+		Optional<Seeker> getSeeker = this.seekerDao.findById(seeker.getSeekersId());
 		if (!getSeeker.isPresent()) {
 			return new ErrorResult("There is no such seeker");
 		} else {
