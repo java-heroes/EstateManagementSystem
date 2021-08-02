@@ -48,7 +48,7 @@ public class Home_Information {
 	@Column(name = "description")
 	private String description;
 	
-	@Column(name = "image")
-	private BufferedImage image;
+/*	@Column(name = "image")
+	private BufferedImage image;*/
 
 }
