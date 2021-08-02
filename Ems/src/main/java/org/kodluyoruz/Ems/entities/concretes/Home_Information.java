@@ -1,6 +1,6 @@
 package org.kodluyoruz.Ems.entities.concretes;
 
-import java.awt.image.BufferedImage;
+import java.io.File;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -48,7 +48,6 @@ public class Home_Information {
 	@Column(name = "description")
 	private String description;
 	
-/*	@Column(name = "image")
-	private BufferedImage image;*/
-
+	@Column(name = "image")
+	private File image;
 }
