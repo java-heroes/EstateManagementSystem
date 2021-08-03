@@ -18,13 +18,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@JsonIgnoreProperties (value = { "hibernateLazyInitializer", "handler"})
 @Table(name = "seekers")
 public class Seeker {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "seekers_id")
 	@PrimaryKeyJoinColumn
-	@JsonIgnoreProperties (value = { "hibernateLazyInitializer", "handler"})
+
 	private int seekersId;
 
 	@Column(name = "first_name")

@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +22,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "sellers")
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler" }) 
 public class Seller {
 	
 	

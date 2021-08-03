@@ -2,8 +2,9 @@ package org.kodluyoruz.Ems.business.concretes;
 
 import java.util.List;
 
+import org.kodluyoruz.Ems.business.abstracts.RegisterCheckService;
 import org.kodluyoruz.Ems.business.abstracts.RegisterService;
-import org.kodluyoruz.Ems.core.utilities.adapters.mernisServiceAdapter.FakeMernisAdapter;
+import org.kodluyoruz.Ems.core.utilities.adapters.MernisCheckAdapter.MernisAdapter;
 import org.kodluyoruz.Ems.core.utilities.results.DataResult;
 import org.kodluyoruz.Ems.core.utilities.results.ErrorResult;
 import org.kodluyoruz.Ems.core.utilities.results.SuccessDataResult;
@@ -32,27 +33,29 @@ public class RegisterManager implements RegisterService {
 		return new SuccessDataResult<List<Register>>(this.registerDao.findAll(), "Register list successfully.");
 	}
 
-	@Override
+	 @Override
 	public Result add(Register register) {
-		FakeMernisAdapter checkIfRealPerson = new FakeMernisAdapter();
-		boolean result = checkIfRealPerson.Control(register);
-		if (result) {
+		 MernisAdapter mernisAdapter = new MernisAdapter();
+		
+		if (mernisAdapter.CheckPerson(register)) {
 			this.registerDao.save(register);
-			return new SuccessResult("Register add successfully.");
+			return new SuccessResult(" Validation successfull and Register add successfully.");
 		} else {
-			return new ErrorResult("NOT real Person!");
+			return new ErrorResult(" Validation Error - Not a valid person!");
 		}
 	}
+	
+	
 
 	@Override
 	public Result delete(Register register) {
-		this.registerDao.deleteById(register.getRegisterId());
+		this.registerDao.deleteById(register.getRegisterid());
 		return new SuccessResult("Register deleted successfully.");
 	}
 
 	@Override
 	public Result update(Register register) {
-		Optional<Register> getRegister = registerDao.findById(register.getRegisterId());
+		Optional<Register> getRegister = registerDao.findById(register.getRegisterid());
 
 		if (!getRegister.isPresent()) {
 			return new ErrorResult("there is no such id");
