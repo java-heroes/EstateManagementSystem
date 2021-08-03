@@ -48,8 +48,6 @@ public class RegisterController {
 		   
 	   }
 	   
-	
-	   
 	   @DeleteMapping("/delete")
 		public Result delete(@RequestBody  Register register) {
 			return this.registerService.delete(register);

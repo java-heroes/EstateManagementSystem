@@ -7,6 +7,8 @@
 
 package tr.gov.nvi.tckimlik.WS;
 
+import java.rmi.RemoteException;
+
 public class KPSPublicSoapStub extends org.apache.axis.client.Stub implements tr.gov.nvi.tckimlik.WS.KPSPublicSoap {
     private java.util.Vector cachedSerClasses = new java.util.Vector();
     private java.util.Vector cachedSerQNames = new java.util.Vector();
@@ -128,5 +130,11 @@ public class KPSPublicSoapStub extends org.apache.axis.client.Stub implements tr
   throw axisFaultException;
 }
     }
+
+	@Override
+	public boolean TCKimlikNoDogrula(long TCKimlikNo, String ad, String soyad, String string) throws RemoteException {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 }

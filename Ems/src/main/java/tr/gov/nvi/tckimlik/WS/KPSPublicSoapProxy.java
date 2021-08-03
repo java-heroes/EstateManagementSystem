@@ -46,10 +46,10 @@ public class KPSPublicSoapProxy implements tr.gov.nvi.tckimlik.WS.KPSPublicSoap 
     return kPSPublicSoap;
   }
   
-  public boolean TCKimlikNoDogrula(long TCKimlikNo, java.lang.String ad, java.lang.String soyad, int date) throws java.rmi.RemoteException{
+  public boolean TCKimlikNoDogrula(long TCKimlikNo, java.lang.String ad, java.lang.String soyad, String string) throws java.rmi.RemoteException{
     if (kPSPublicSoap == null)
       _initKPSPublicSoapProxy();
-    return kPSPublicSoap.TCKimlikNoDogrula(TCKimlikNo, ad, soyad, date);
+    return kPSPublicSoap.TCKimlikNoDogrula(TCKimlikNo, ad, soyad, string);
   }
   
   

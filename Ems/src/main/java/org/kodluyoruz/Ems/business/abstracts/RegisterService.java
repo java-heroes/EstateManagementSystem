@@ -15,8 +15,6 @@ public interface RegisterService {
     Result add(Register register);
     Result delete(Register register);
     Result update(Register register);
-	
-    
 
 
     
