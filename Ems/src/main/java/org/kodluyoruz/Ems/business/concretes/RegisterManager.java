@@ -2,7 +2,7 @@ package org.kodluyoruz.Ems.business.concretes;
 
 import java.util.List;
 
-import org.kodluyoruz.Ems.business.abstracts.RegisterCheckService;
+
 import org.kodluyoruz.Ems.business.abstracts.RegisterService;
 import org.kodluyoruz.Ems.core.utilities.adapters.MernisCheckAdapter.MernisAdapter;
 import org.kodluyoruz.Ems.core.utilities.results.DataResult;
@@ -12,8 +12,9 @@ import org.kodluyoruz.Ems.core.utilities.results.SuccessResult;
 import org.kodluyoruz.Ems.dataAccess.abstracts.RegisterDao;
 import org.kodluyoruz.Ems.entities.concretes.Register;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.kodluyoruz.Ems.core.utilities.results.Result;
 import org.springframework.stereotype.Service;
+import org.kodluyoruz.Ems.core.utilities.results.Result;
+
 
 import java.util.Optional;
 
@@ -33,9 +34,9 @@ public class RegisterManager implements RegisterService {
 		return new SuccessDataResult<List<Register>>(this.registerDao.findAll(), "Register list successfully.");
 	}
 
-	 @Override
+	@Override
 	public Result add(Register register) {
-		 MernisAdapter mernisAdapter = new MernisAdapter();
+	MernisAdapter mernisAdapter = new MernisAdapter();
 		
 		if (mernisAdapter.CheckPerson(register)) {
 			this.registerDao.save(register);

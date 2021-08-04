@@ -48,6 +48,6 @@ public class HomeInformation {
 	@Column(name = "description")
 	private String description;
 	
-	@Column(name = "image")
-	private byte[] image;
+	/*@Column(name = "image")
+	private byte[] image;*/
 }

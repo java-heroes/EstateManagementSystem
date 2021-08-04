@@ -1,6 +1,8 @@
 package org.kodluyoruz.Ems.entities.concretes;
 
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,29 +27,35 @@ public class Register {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name= "id")
+	@Column(name= "register_id")
 	@PrimaryKeyJoinColumn
-	private int registerId;
+	private int registerid;
 	
 	
 	@Column(name = "first_name")
-	private String firstName;
+	private String firstname;
 	
 	@Column(name = "last_name")
-	private String lastName;
+	private String lastname;
 
 	@Column(name = "nationalty_identity")
-	private String nationaltyIdentity;
+	private String nationaltyidentity;
 
-	@Column(name = "date_of_birth")
-	private String dateofBirth;
+	@Column(name= "date_of_birth",columnDefinition = "Date default CURRENT_DATE")
+	private Date dateOfBirth;
+
 	
 	@Column(name="email")
 	private String email;
 	
 	@Column(name="password")
 	private String password;
+	
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
 
-	
-	
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
 }
