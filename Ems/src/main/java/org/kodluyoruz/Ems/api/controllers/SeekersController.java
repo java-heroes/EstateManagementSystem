@@ -6,7 +6,9 @@ import org.kodluyoruz.Ems.business.abstracts.SeekersService;
 import org.kodluyoruz.Ems.core.utilities.results.DataResult;
 import org.kodluyoruz.Ems.core.utilities.results.Result;
 import org.kodluyoruz.Ems.entities.concretes.Seeker;
+import org.kodluyoruz.Ems.entities.concretes.Seller;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -40,4 +42,20 @@ public class SeekersController {
 	public DataResult<Seeker> getById(@PathVariable int id) {
 		return this.seekersService.getById(id);
 	}
+	
+	 @DeleteMapping("/delete")
+        public Result delete(@RequestBody Seeker seeker) {
+		  return this.seekersService.delete(seeker);
+
+			}
+	 
+	   @PostMapping("/update")
+	     public Result update(@RequestBody Seeker seeker) {
+		return this.seekersService.update(seeker);
+	   
+     }
+	   
+	 
+	 
+	
 }
