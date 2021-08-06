@@ -11,4 +11,5 @@ public interface HomeInformationService {
     Result delete(HomeInformation homeInformation);
     Result update(HomeInformation homeInformation);
 	DataResult<HomeInformation> getById(int id);
+   
 }

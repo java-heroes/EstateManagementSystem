@@ -18,6 +18,7 @@ public class HomeInformationManager implements HomeInformationService{
 
 	private HomeInformationDao homeInformationDao;
 	
+	
 	@Autowired
 	public HomeInformationManager(HomeInformationDao homeInformationDao) {
 		super();
@@ -33,6 +34,7 @@ public class HomeInformationManager implements HomeInformationService{
 	public Result add(HomeInformation homeInformationDao) {
 		this.homeInformationDao.save(homeInformationDao);
 		return new SuccessResult("The house has been successfully added.");
+	
 	}
 
 	@Override
@@ -58,5 +60,9 @@ public class HomeInformationManager implements HomeInformationService{
 	public DataResult<HomeInformation> getById(int id) {
 		return new SuccessDataResult<HomeInformation>(this.homeInformationDao.getById(id));
 	}
+
+
+
+
 
 }

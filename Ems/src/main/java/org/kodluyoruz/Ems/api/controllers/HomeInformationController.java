@@ -1,6 +1,8 @@
 package org.kodluyoruz.Ems.api.controllers;
 
 import java.util.List;
+
+
 import org.kodluyoruz.Ems.business.abstracts.HomeInformationService;
 import org.kodluyoruz.Ems.core.utilities.results.DataResult;
 import org.kodluyoruz.Ems.core.utilities.results.Result;
@@ -14,13 +16,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
+
 
 @RestController
 @RequestMapping("/api/homeInformation")
 @CrossOrigin
 public class HomeInformationController {
+	
 	private HomeInformationService homeInformationService;
+	
+	
 	
 	@Autowired
 	public HomeInformationController(HomeInformationService homeInformationService) {
@@ -32,15 +41,18 @@ public class HomeInformationController {
 	}
 
 	@PostMapping("/add")
-	public Result add(@RequestBody HomeInformation homeInformation) {
+	public Result add(HomeInformation homeInformation , @RequestBody MultipartFile file) {
 		return this.homeInformationService.add(homeInformation);
+		
 
 	}
-
+	
 	@GetMapping("/get/{id}")
 	public DataResult<HomeInformation> getById(@PathVariable int id) {
 		return this.homeInformationService.getById(id);
 	}
+	
+	
 	
 	 
 	   
@@ -53,4 +65,10 @@ public class HomeInformationController {
 		public Result update(@RequestBody  HomeInformation homeInformation) {
 			return this.homeInformationService.update(homeInformation);
 		}
+	   
+	
+			
+		
+		
+	   
 }
