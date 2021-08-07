@@ -4,7 +4,6 @@ import java.util.List;
 
 
 import org.kodluyoruz.Ems.business.abstracts.RegisterService;
-import org.kodluyoruz.Ems.core.utilities.adapters.MernisCheckAdapter.MernisAdapter;
 import org.kodluyoruz.Ems.core.utilities.results.DataResult;
 import org.kodluyoruz.Ems.core.utilities.results.ErrorResult;
 import org.kodluyoruz.Ems.core.utilities.results.SuccessDataResult;
@@ -34,19 +33,13 @@ public class RegisterManager implements RegisterService {
 		return new SuccessDataResult<List<Register>>(this.registerDao.findAll(), "Register list successfully.");
 	}
 
+	
 	@Override
-	public Result add(Register register) {
-	MernisAdapter mernisAdapter = new MernisAdapter();
-		
-		if (mernisAdapter.CheckPerson(register)) {
-			this.registerDao.save(register);
-			return new SuccessResult(" Validation successfull and Register add successfully.");
-		} else {
-			return new ErrorResult(" Validation Error - Not a valid person!");
-		}
+	public Result add( Register register) {
+		this.registerDao.save(register);
+		return new SuccessResult("Employees add successfully.");
+	
 	}
-	
-	
 
 	@Override
 	public Result delete(Register register) {

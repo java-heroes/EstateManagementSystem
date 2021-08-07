@@ -59,7 +59,7 @@ public class UsersController {
 
 	@PostMapping("/update")
 	public Result update(@RequestBody User user) {
-		return this.update(user);
+		return this.userService.update(user);
 	}
 
 }
