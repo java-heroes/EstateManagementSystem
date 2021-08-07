@@ -6,7 +6,6 @@ import org.kodluyoruz.Ems.business.abstracts.SeekersService;
 import org.kodluyoruz.Ems.core.utilities.results.DataResult;
 import org.kodluyoruz.Ems.core.utilities.results.Result;
 import org.kodluyoruz.Ems.entities.concretes.Seeker;
-import org.kodluyoruz.Ems.entities.concretes.Seller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
